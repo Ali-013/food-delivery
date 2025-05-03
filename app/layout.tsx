@@ -1,4 +1,4 @@
-import { fugaz } from "@/utils/appFonts";
+import { fugaz, openSans } from "@/utils/appFonts";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`w-full w-max-[1000px] mx-auto text-sm sm:text-base min-h-screen flex flex-col ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`w-full w-max-[1000px] mx-auto text-sm sm:text-base min-h-screen flex flex-col text-slate-800 ${openSans.className}`}
       >
         {header}
         {children}
