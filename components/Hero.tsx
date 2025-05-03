@@ -1,3 +1,4 @@
+import Button from "@/components/Button";
 import { fugaz } from "@/utils/appFonts";
 
 export default function Hero() {
@@ -14,6 +15,10 @@ export default function Hero() {
         Lets track those mood changes for{" "}
         <span className='font-semibold '>Every Day of Every Year</span>
       </p>
+      <div className='grid grid-cols-2 gap-5'>
+        <Button text='Login' dark={false} />
+        <Button text='Sign Up' dark={true} />
+      </div>
     </div>
   );
 }
