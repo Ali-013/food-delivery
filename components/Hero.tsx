@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import Calender from "@/components/Calender";
 import { fugaz } from "@/utils/appFonts";
 
 export default function Hero() {
@@ -19,6 +20,7 @@ export default function Hero() {
         <Button text='Login' dark={false} />
         <Button text='Sign Up' dark={true} />
       </div>
+      <Calender />
     </div>
   );
 }
