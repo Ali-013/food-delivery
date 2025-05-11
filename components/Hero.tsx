@@ -4,7 +4,7 @@ import { fugaz } from "@/utils/appFonts";
 
 export default function Hero() {
   return (
-    <div className='py-4 sm:py-12 md-py-20 flex flex-col gap-4 sm:gap-8 items-center  '>
+    <div className='py-4 sm:py-12 md-py-20 flex flex-col gap-4 sm:gap-8 items-center w-full '>
       <h1
         className={`w-full sm:max-w-[700px] md:max-w-[1200px] text-5xl sm:text-6xl md:text-7xl text-center ${fugaz.className}`}
       >
@@ -20,7 +20,9 @@ export default function Hero() {
         <Button text='Login' dark={false} />
         <Button text='Sign Up' dark={true} />
       </div>
-      <Calender />
+      <div className=' w-full md:w-2xl rounded-2xl py-4 sm:py-6'>
+        <Calender demo />
+      </div>
     </div>
   );
 }
