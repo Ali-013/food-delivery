@@ -76,17 +76,21 @@ export default function Calender(props: CalenderProps) {
     ? 5
     : Math.floor(daysToShow / 7) + (daysToShow % 7 > 0 ? 1 : 0);
   const numericMonth = Object.keys(months).indexOf(selectedMonth);
-  function handleChangeMonth(value) {
+  interface HandleChangeMonthFn {
+    (value: number): void;
+  }
+
+  const handleChangeMonth: HandleChangeMonthFn = (value) => {
     if (numericMonth + value < 0) {
-      setSelectedYear((selectedYear) => selectedYear - 1);
+      setSelectedYear(selectedYear - 1);
       setSelectedMonth(monthsArr[11]);
     } else if (numericMonth + value > 11) {
-      setSelectedYear((selectedYear) => selectedYear + 1);
+      setSelectedYear(selectedYear + 1);
       setSelectedMonth(monthsArr[0]);
     } else {
       setSelectedMonth(monthsArr[numericMonth + value]);
     }
-  }
+  };
   return (
     <div className='flex flex-col gap-4'>
       {!demo && (

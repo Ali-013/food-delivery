@@ -278,8 +278,7 @@ export default function Dashboard() {
         </div>
         <div className='w-full md:w-2xl rounded-2xl py-4 sm:py-6'>
           <Calender
-            completeData={data}
-            handleUpdateMood={handleUpdateMood}
+            completeData={data ?? undefined}
             selectedMonth={selectedMonth}
             setSelectedMonth={setSelectedMonth}
             selectedYear={selectedYear}
