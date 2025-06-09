@@ -1,4 +1,4 @@
-import Button from "@/components/Button";
+import ActionCalls from "@/components/ActionCalls";
 import Calender from "@/components/Calender";
 import { fugaz } from "@/utils/appFonts";
 
@@ -16,10 +16,7 @@ export default function Hero() {
         Lets track those mood changes for{" "}
         <span className='font-semibold '>Every Day of Every Year</span>
       </p>
-      <div className='grid grid-cols-2 gap-5'>
-        <Button text='Login' dark={false} />
-        <Button text='Sign Up' dark={true} />
-      </div>
+      <ActionCalls />
       <div className=' w-full md:w-2xl rounded-2xl py-4 sm:py-6'>
         <Calender demo />
       </div>

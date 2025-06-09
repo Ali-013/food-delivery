@@ -3,10 +3,12 @@ type buttonProps = {
   dark: boolean;
   text: string;
   full?: boolean;
+  onClick?: () => void;
 };
 export default function Button(props: buttonProps) {
   return (
     <button
+      onClick={props.onClick}
       className={` rounded-full overflow-hidden duration-300 hover:cursor-pointer border-2 border-solid border-indigo-600 ${
         props.dark
           ? "text-white bg-indigo-600 hover:bg-white hover:text-indigo-600"
