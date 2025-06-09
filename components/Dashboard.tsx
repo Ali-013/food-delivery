@@ -256,12 +256,12 @@ export default function Dashboard() {
                   now.getFullYear() != selectedYear ||
                   now.getMonth() != Object.keys(months).indexOf(selectedMonth)
                 } // Disable buttons while updating
-                className={`p-4 grid grid-col gap-4 rounded-2xl hover:cursor-pointer hover:border-0 bg-indigo-50 buttonShade hover:bg-indigo-100 w-full flex-1 ${
+                className={`p-4 grid grid-col gap-4 rounded-2xl  bg-indigo-50 buttonShade w-full flex-1 ${
                   isUpdating ||
                   now.getFullYear() != selectedYear ||
                   now.getMonth() != Object.keys(months).indexOf(selectedMonth)
                     ? "opacity-50 cursor-not-allowed"
-                    : ""
+                    : " hover:bg-indigo-100 hover:border-0 hover:cursor-pointer "
                 }`}
               >
                 <p className='text-4xl sm:text-5xl md:text-6xl'>

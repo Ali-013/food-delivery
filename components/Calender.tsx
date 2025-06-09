@@ -1,4 +1,5 @@
 "use client";
+import type { MoodData } from "@/types";
 import { baseRatings, gradients } from "@/utils";
 import { fugaz } from "@/utils/appFonts";
 import {
@@ -32,11 +33,20 @@ const daysOfWeek = [
   "Saturday",
 ];
 
-export default function Calender(props) {
+interface CalenderProps {
+  demo?: boolean;
+  completeData?: MoodData;
+  selectedMonth?: string;
+  setSelectedMonth?: (month: string) => void;
+  selectedYear?: number;
+  setSelectedYear?: (year: number) => void;
+}
+
+export default function Calender(props: CalenderProps) {
   const {
     demo = false,
     completeData = {},
-    selectedMonth = new Date().getMonth(),
+    selectedMonth = monthsArr[new Date().getMonth()],
     setSelectedMonth = () => {},
     selectedYear = new Date().getFullYear(),
     setSelectedYear = () => {},
@@ -140,7 +150,11 @@ export default function Calender(props) {
                     style={{ background: color }}
                     key={dayOfWeekIndex}
                     className={`text-sx sm:text-sm border border-solid rounded-lg p-2 flex items-center gap-2 justify-between
-                    ${today ? " border-indigo-500" : "border-indigo-200"}
+                    ${
+                      today && !demo
+                        ? " border-indigo-500"
+                        : "border-indigo-200"
+                    }
                     ${color === "white" ? "text-indigo-400" : "text-white"}`}
                   >
                     <p>{dayIndex}</p>
