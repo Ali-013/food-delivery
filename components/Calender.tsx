@@ -105,7 +105,7 @@ export default function Calender(props: CalenderProps) {
             />
           </button>
           <p
-            className={`text-center capitalize textGradient text-xl md:text-2xl ${fugaz.className}`}
+            className={`text-center capitalize textGradient text-xl md:text-2xl whitespace-nowrap ${fugaz.className}`}
           >
             {selectedMonth + ", " + selectedYear}
           </p>
